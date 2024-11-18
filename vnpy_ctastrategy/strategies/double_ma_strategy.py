@@ -66,6 +66,7 @@ class DoubleMaStrategy(CtaTemplate):
         """
         Callback of new bar data update.
         """
+        self.write_log(f"{bar.datetime}{bar.vt_symbol}{bar.close_price}")
         self.cancel_all()
 
         am = self.am
